@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import './Headphone.css'
 
 const Headphone = (props) => {
@@ -6,15 +8,15 @@ const Headphone = (props) => {
     const {handleAddtoCart} = props;
     return (
         <div className='headphone'>
-            <img src={picture} alt="" />
-           <div className='headphone-info'>
-            <p className='headphone-name'>{name}</p>
-            <p>Price: ${price}</p>
-           </div>
-           <button onClick={() => handleAddtoCart(props.product)} className='btn-cart'>
-               <p className='btn-text'>Add to cart</p>
-               {/* <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon> */}
-               </button>
+               <img src={picture} alt="" />
+            <div className='headphone-info'>
+                <h2 className='headphone-name'>{name}</h2>
+                <h3>Price: ${price}</h3>
+            </div>
+           <button onClick={() => handleAddtoCart(props.product)} className='button'>
+               <p className='button-text'>Add to cart</p>
+               <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon>
+            </button>
         </div>
     );
 };

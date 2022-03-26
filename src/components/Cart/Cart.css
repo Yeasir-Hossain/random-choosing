@@ -1,0 +1,19 @@
+.cart{
+    position: sticky;
+    top: 0;
+    padding: 30px 20px;
+}
+.cart h3{
+    text-align: center;
+}
+.cart img{
+    height: 50px;
+    width: 50px;
+}
+.single{
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5px;
+    display: flex;
+    background-color: aqua;
+}
