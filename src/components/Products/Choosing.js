@@ -6,16 +6,28 @@ import './Choosing.css'
 const Products = () => {
     const [headphones,setHeaphones] = useState([])
     const [cart, setCart] = useState([])
+    let [choosen , setChoosen] = useState([])
     useEffect(()=>{
         fetch('products.json')
         .then(res=> res.json())
         .then(data=>setHeaphones(data))
     }, [])
+    
+    const handleChooseone = () => {
+        const index = Math.floor(Math.random() * 10) % 4;
+        choosen = cart[index]
+        setChoosen(choosen)
+    }
+
 
     const handleAddtoCart = (selectedHeadphone) => {
         let newCart = []
         const exist = cart.find(headphone=> headphone.id === selectedHeadphone.id)
-        if(!exist){
+        if(cart.length>3){
+            alert("Only 4 items are accepted")
+            newCart = [...cart]
+        }
+        else if(!exist){
             newCart = [...cart, selectedHeadphone];
         }
         else{
@@ -37,7 +49,7 @@ const Products = () => {
                 }
             </div>
             <div className='choice-container'>
-                <Cart cart = {cart}></Cart>
+                <Cart cart = {cart} handleChooseone = {handleChooseone} choosen = {choosen}></Cart>
             </div>  
         </div>
         
