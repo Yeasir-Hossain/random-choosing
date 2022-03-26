@@ -6,7 +6,7 @@ const Cart = (props) => {
     const {choosen} = props;
     return (
         <div className='cart'>
-            <h3>Your choices</h3>
+            <h3>YOUR CHOICES</h3>
             {
                 cart.map(headphone=>(
                     <div className='single' key = {headphone.id}>
@@ -19,13 +19,13 @@ const Cart = (props) => {
             <div>
                 {
                     <div className='choosen'>
-                        <img src={choosen.picture} alt="" />
+                        <img src={choosen.picture} alt=" " />
                         <h3>{choosen.name}</h3>
                     </div>
                 }
                 <div className='buttons'>
                     <button className='btn choose' onClick={props.handleChooseone}>Choose one</button>
-                    <button className='btn again'>Choose again</button>
+                    <button className='btn again' onClick={props.handleChooseagain}>Choose again</button>
                 </div>
                     
             </div>

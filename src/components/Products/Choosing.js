@@ -14,11 +14,21 @@ const Products = () => {
     }, [])
     
     const handleChooseone = () => {
+        if(cart.length === 0)
+        {
+            alert("Please choose headphones")
+            window.location.reload()
+        }
         const index = Math.floor(Math.random() * 10) % 4;
         choosen = cart[index]
         setChoosen(choosen)
+        
     }
-
+    const handleChooseagain = () =>{
+        const emptycart = []
+        setCart(emptycart);
+        setChoosen(emptycart);
+    }
 
     const handleAddtoCart = (selectedHeadphone) => {
         let newCart = []
@@ -49,7 +59,7 @@ const Products = () => {
                 }
             </div>
             <div className='choice-container'>
-                <Cart cart = {cart} handleChooseone = {handleChooseone} choosen = {choosen}></Cart>
+                <Cart cart = {cart} handleChooseone = {handleChooseone} choosen = {choosen} handleChooseagain = {handleChooseagain}></Cart>
             </div>  
         </div>
         

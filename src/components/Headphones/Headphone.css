@@ -3,6 +3,7 @@
     height: 510px;
     border-radius: 8px;
     position: relative;
+    box-shadow: 5px 10px 10px #888888;
 }
 
 .headphone img{
@@ -20,9 +21,16 @@
     background-color: #00E070;
     border: none;
     border-radius: 0px 0px 8px 8px;
+    transition: .5s;
     position: absolute;
     bottom: 0;
 }
 .button:hover{
-    background-color: #00cc00;
+    background-color: #00bb5d;
+    transition: .5s ease;
+}
+.button-text{
+    margin-right: 3px;
+    font-family: 'Roboto';
+    font-size: 15px;
 }
