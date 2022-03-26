@@ -10,6 +10,16 @@
     margin: 100px 50px;
 }
 .choice-container{
-    background-color:  #f2f2eb;
-    border-left: 1px solid white;
+    background-color:  #d7f1d3;
+    border-left: 1px solid rgba(6, 245, 6, 0.404);
 }
+@media screen and (max-width: 688px) {
+    .headphones-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+  }
+@media screen and (max-width: 1312px) {
+    .headphones-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+  }

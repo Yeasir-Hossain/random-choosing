@@ -13,6 +13,10 @@
     margin: 7px;
 }
 
+.headphone-info{
+    margin-left: 10px;
+}
+
 .button{
     display: flex;
     align-items: center;

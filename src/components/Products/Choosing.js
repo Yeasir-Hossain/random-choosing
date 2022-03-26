@@ -19,7 +19,7 @@ const Products = () => {
             alert("Please choose headphones")
             window.location.reload()
         }
-        const index = Math.floor(Math.random() * 10) % 4;
+        const index = Math.floor(Math.random() * 10) % (cart.length);
         choosen = cart[index]
         setChoosen(choosen)
         

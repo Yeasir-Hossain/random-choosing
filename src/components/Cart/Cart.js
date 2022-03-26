@@ -18,10 +18,11 @@ const Cart = (props) => {
             <h3>Choosen product:</h3>
             <div>
                 {
-                    <div className='choosen'>
+                    choosen.length !== 0 &&  <div className='choosen'>
                         <img src={choosen.picture} alt=" " />
                         <h3>{choosen.name}</h3>
                     </div>
+                    
                 }
                 <div className='buttons'>
                     <button className='btn choose' onClick={props.handleChooseone}>Choose one</button>
